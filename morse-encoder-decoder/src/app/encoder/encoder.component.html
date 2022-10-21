@@ -1,0 +1,14 @@
+<br>
+<form>
+  <div>
+    <input name="inputArea" type="text" placeholder="Text to encode ..." [(ngModel)]="inputText" (ngModelChange)="inputOnChange()">
+  </div>
+
+  <div>
+    <button type="button" (click)="encodeBtnOnClick()" [disabled]="btnDisable">Encode</button>
+  </div>
+
+  <div>
+    <input name="outputArea" type="text" placeholder="Result ..." readonly [(ngModel)]="outputText">
+  </div>
+</form>

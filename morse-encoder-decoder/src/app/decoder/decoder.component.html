@@ -1,0 +1,17 @@
+<br>
+<form>
+  <div>
+    <input name="inputArea" type="text" placeholder="Text to decode ..." [(ngModel)]="inputText" (ngModelChange)="inputOnChange() ">
+  </div>
+  <div [hidden]="!decoder.errorOccurred">
+    <p id="inputErrorMsg">Invalid combination: {{ decoder.errorCause }}</p>
+  </div>
+
+  <div>
+    <button type="button" (click)="decodeBtnOnClick()" [disabled]="btnDisable">Decode</button>
+  </div>
+
+  <div>
+    <input name="outputArea" type="text" placeholder="Result ..." readonly [(ngModel)]="outputText">
+  </div>
+</form>
